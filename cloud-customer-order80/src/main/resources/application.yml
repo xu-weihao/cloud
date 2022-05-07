@@ -1,0 +1,22 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: order-service
+eureka:
+  instance:
+    instance-id: order-service
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/,http://localhost:7003/eureka/
+
+feign:
+  client:
+    config:
+      default:
+        connect-timeout: 5000
+        read-timeout: 5000
+  hystrix:
+    enabled:

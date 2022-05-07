@@ -1,0 +1,22 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: payment
+#          uri: http://localhost:8001
+          uri: lb://payment-service
+          predicates:
+            - Path=/payment/**
+  main:
+    web-application-type: reactive
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
