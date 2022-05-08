@@ -8,8 +8,10 @@ spring:
     config:
       server:
         git:
-          uri: git@github.com:xu-weihao/cloud.git
+          uri: https://github.com/xu-weihao/cloud.git
           search-paths: config
+          username: xu-weihao
+          password: xwh950612
         default-label: main
 
 eureka:
