@@ -19,6 +19,7 @@
         <module>cloud-consumerZK-corder80</module>
         <module>cloud-hystrix-dashboard9001</module>
         <module>cloud-gateway-gateway9527</module>
+        <module>cloud-config-server3344</module>
     </modules>
 
     <properties>
